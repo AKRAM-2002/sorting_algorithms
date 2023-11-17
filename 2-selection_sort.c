@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "sort.h"
 
 
@@ -14,17 +13,15 @@ void selection_sort(int *array, size_t size)
 
     for (int i = 0; i < size - 1; i++)
     {
-        int smallestIndex = i;  /* Assume the current index has the smallest value */
-
+        int smallestIndex = i;  
         for (int j = i + 1; j < size; j++)
         {
             if (array[j] < array[smallestIndex])
             {
-                smallestIndex = j;  /* Update the index of the smallest element */
-            }
+                smallestIndex = j; }
         }
 
-        /* Swap the found smallest element with the element at index i */
+        
         tmp = array[i];
         array[i] = array[smallestIndex];
         array[smallestIndex] = tmp;
